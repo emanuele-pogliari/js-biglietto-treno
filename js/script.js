@@ -3,7 +3,7 @@ const age = prompt("Inserisci la tua età");
 
 let priceTicket = kilometers * 0.21;
 
-if (!isNaN(age) && !isNaN(kilometers)) {
+if (!isNaN(age) && !isNaN(kilometers) && (age > 0 && age < 110)) {
     if (age < 18) {
         priceTicket = priceTicket - (priceTicket / 100) * 20
     }

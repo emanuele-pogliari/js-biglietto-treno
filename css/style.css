@@ -1,0 +1,16 @@
+.card {
+    width: 600px;
+    height: 300px;
+    margin: auto;
+    padding: 20px;
+}
+
+.logo-card {
+    width: 100%;
+    background-color: white;
+}
+
+.img-logo {
+    width: 50%;
+    text-align: center;
+}
