@@ -1,19 +1,16 @@
-const kilometers = prompt("inserisci distanza in km");
-const age = prompt("Iserisci età");
+const kilometers = prompt("Inserisci i chilometri da percorrere");
+const age = prompt("Inserisci la tua età");
 
 let priceTicket = kilometers * 0.21;
 
 if (!isNaN(age) && !isNaN(kilometers)) {
     if (age < 18) {
-        priceTicket = Math.round((priceTicket - (priceTicket / 100) * 20) * 1000) / 100;
-        console.log(priceTicket)
+        priceTicket = priceTicket - (priceTicket / 100) * 20
     }
     if (age >= 65) {
-        priceTicket = Math.round((priceTicket - (priceTicket / 100) * 40) * 1000) / 100;
-        console.log(priceTicket)
+        priceTicket = priceTicket - (priceTicket / 100) * 40
     }
-    document.getElementById("price").innerHTML = priceTicket;
-
+    document.getElementById("price").innerHTML = priceTicket.toFixed(2);
 } else {
     document.getElementById("price").innerHTML = "Hai inserito dei valori non validi";
 }
