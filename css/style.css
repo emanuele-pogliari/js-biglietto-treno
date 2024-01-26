@@ -1,18 +1,62 @@
-.card {
-    width: 600px;
+@font-face {
+    src: url('../font/London-Tube.woff2') format('woff2'),
+        url('../font/London-Tube.woff') format('woff');
+    font-family: 'London Tube';
+    font-weight: normal;
+    font-style: normal;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+
+}
+
+body {
+    font-family: "London Tube", sans-serif;
+    background-image: url("../img/tube.jpeg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position-y: 23%;
+}
+
+.logo-container {
+    width: 300px;
     height: 300px;
-    margin: auto;
-    padding: 20px;
-    background-color: red;
-    border-radius: 15px;
+    position: relative;
+    margin: 50px auto;
 }
 
-.logo-card {
-    width: 100%;
-    background-color: white;
+.circle {
+    width: 300px;
+    height: 300px;
+    color: white;
+    border-radius: 50%;
+    position: relative;
+    border: 50px solid red;
+    position: absolute;
 }
 
-.img-logo {
-    width: 50%;
+.inner-rectangle {
+    width: 360px;
+    height: 60px;
+    background-color: blue;
+    position: absolute;
+    border: 5px solid grey;
+    top: 50%;
+    left: -80px;
+    transform: translateY(-50%);
+    z-index: 5;
     text-align: center;
+    line-height: 50px;
+    font-size: 33px;
+}
+
+.card {
+    width: 800px;
+    height: 450px;
+    border-radius: 15px;
+    background-color: white;
+    margin: auto;
 }

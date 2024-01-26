@@ -1,5 +1,5 @@
-const kilometers = prompt("Inserisci i chilometri da percorrere");
-const age = prompt("Inserisci l'età");
+const kilometers = prompt();
+const age = 23;
 
 let priceTicket = kilometers * 0.21;
 

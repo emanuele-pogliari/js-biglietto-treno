@@ -9,18 +9,25 @@
 </head>
 
 <body>
-    <h1>Biglietto del treno</h1>
-    <div class="card">
-        <div class="logo-card">
-            <div class="logo"></div>
-            <img class="img-logo" src="./img/train.png" alt="">
+    <div class="logo-container">
+        <div class="border-circle-outer"
+            style="border: 5px solid grey; border-radius: 50%; width:300px; height:300px; position:absolute; top:0; z-index:3">
         </div>
+        <div class=" circle">
+            <div class="border-circle-inner"
+                style="border: 5px solid grey; border-radius: 50%; width:200px; height:200px; position:absolute; top:0;">
+            </div>
+            <div class="inner-rectangle">
+                <p>BOOLEANGROUND</p>
+            </div>
+        </div>
+    </div>
 
-        <div class="main">
-            <div class="user-age"></div>
-            <div class="km"></div>
-            <p id="price"></p>
-        </div>
+    <div class="card">
+        <p id="price"></p>
+    </div>
+
+    </div>
 
     </div>
 
