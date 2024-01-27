@@ -10,7 +10,6 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-
 }
 
 body {
@@ -36,6 +35,9 @@ body {
     position: relative;
     border: 50px solid red;
     position: absolute;
+    box-shadow: 0px -25px 20px -20px rgba(0, 0, 0, 0.45), 25px 0 20px -20px rgba(0, 0, 0, 0.45), 0px 25px 20px -20px rgba(0, 0, 0, 0.45), -25px 0 20px -20px rgba(0, 0, 0, 0.45);
+    animation: flicker 1.5s infinite alternate;
+    color: #fff;
 }
 
 .inner-rectangle {
@@ -43,7 +45,7 @@ body {
     height: 60px;
     background-color: blue;
     position: absolute;
-    border: 5px solid grey;
+    border: 5px solid white;
     top: 50%;
     left: -80px;
     transform: translateY(-50%);
@@ -51,12 +53,122 @@ body {
     text-align: center;
     line-height: 50px;
     font-size: 33px;
+    box-shadow: 0px -25px 20px -20px rgba(0, 0, 0, 0.45), 25px 0 20px -20px rgba(0, 0, 0, 0.45), 0px 25px 20px -20px rgba(0, 0, 0, 0.45), -25px 0 20px -20px rgba(0, 0, 0, 0.45);
+    animation: flicker 1.5s infinite alternate;
+    color: #fff;
 }
 
 .card {
     width: 800px;
-    height: 450px;
     border-radius: 15px;
-    background-color: white;
+    background-color: rgb(204, 200, 200);
     margin: auto;
+    color: blue;
+    padding: 20px 100px;
+    background-color: rgba(232, 216, 216, 0.15);
+    backdrop-filter: blur(10px);
+    box-shadow: 0px -25px 20px -20px rgba(0, 0, 0, 0.45), 25px 0 20px -20px rgba(0, 0, 0, 0.45), 0px 25px 20px -20px rgba(0, 0, 0, 0.45), -25px 0 20px -20px rgba(0, 0, 0, 0.45);
+}
+
+.border-circle-outer {
+    border: 5px solid rgb(204, 200, 200);
+    border-radius: 50%;
+    width: 300px;
+    height: 300px;
+    position: absolute;
+    top: 0;
+    z-index: 3
+}
+
+.border-circle-inner {
+    border: 5px solid rgb(204, 200, 200);
+    border-radius: 50%;
+    width: 200px;
+    height: 200px;
+    position: absolute;
+    top: 0;
+}
+
+@keyframes flicker {
+
+    0%,
+    18%,
+    22%,
+    25%,
+    53%,
+    57%,
+    100% {
+
+        text-shadow:
+            0 0 4px #fff,
+            0 0 11px #fff,
+            0 0 19px #fff,
+            0 0 40px rgb(47, 47, 143),
+            0 0 80px rgb(47, 47, 143),
+            0 0 90px rgb(47, 47, 143),
+            0 0 100px #0fa,
+            0 0 150px #0fa;
+
+    }
+
+    20%,
+    24%,
+    55% {
+        text-shadow: none;
+    }
+}
+
+@keyframes flicker-circle {
+
+    0%,
+    18%,
+    22%,
+    25%,
+    53%,
+    57%,
+    100% {
+
+        text-shadow:
+            0 0 4px #fff,
+            0 0 21px #fff,
+            0 0 29px #fff,
+            0 0 50px rgb(202, 32, 20),
+            0 0 90px rgb(202, 32, 20),
+            0 0 110px rgb(202, 32, 20),
+            0 0 120px #0fa,
+            0 0 170px #0fa;
+    }
+
+    20%,
+    24%,
+    55%,
+    80% {
+        text-shadow: none;
+    }
+}
+
+
+
+#price {
+    color: black;
+    z-index: 7;
+}
+
+
+#km_run,
+#age_entered,
+#disc_applied,
+#price {
+    width: 100%;
+    height: 60px;
+    background-color: rgba(245, 245, 245, 0.6);
+    border-radius: 15px;
+    color: rgb(42, 38, 38);
+}
+
+
+.text {
+    font-size: 25px;
+    padding-left: 10px;
+    line-height: 60px;
 }
