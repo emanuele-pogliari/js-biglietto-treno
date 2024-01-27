@@ -61,12 +61,12 @@ body {
 .card {
     width: 800px;
     border-radius: 15px;
-    background-color: rgb(204, 200, 200);
-    margin: auto;
+
+    margin: 100px auto;
     color: blue;
-    padding: 20px 100px;
+    padding: 20px 100px 70px;
     background-color: rgba(232, 216, 216, 0.15);
-    backdrop-filter: blur(10px);
+    backdrop-filter: blur(23px);
     box-shadow: 0px -25px 20px -20px rgba(0, 0, 0, 0.45), 25px 0 20px -20px rgba(0, 0, 0, 0.45), 0px 25px 20px -20px rgba(0, 0, 0, 0.45), -25px 0 20px -20px rgba(0, 0, 0, 0.45);
 }
 
