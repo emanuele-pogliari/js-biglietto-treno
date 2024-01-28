@@ -3,8 +3,9 @@ let kilometers;
 let age;
 
 setTimeout(function () {
-    kilometers = prompt("1");
-    age = prompt("2");
+
+    kilometers = prompt("Inserisci chilometri da percorrere");
+    age = prompt("Inserisci la tua età");
 
     let priceTicket = kilometers * 0.21;
 
@@ -23,28 +24,22 @@ setTimeout(function () {
         document.getElementById("age_entered").innerHTML = `${age} anni`
         document.getElementById("km_run").innerHTML = `${kilometers} km`;
         document.getElementById("price").innerHTML = `${priceTicket.toFixed(2)} €`;
+        document.getElementsByClassName("data")[0].classList.toggle("visible");
     } else {
         let check_age;
         let check_km;
+        document.getElementsByClassName("data_error")[0].classList.toggle("visible");
         if (isNaN(age) || (age < 0 && age > 110) || (age % 1 != 0)) {
-            document.getElementById("price").innerHTML = "Hai inserito un valore non valido per l'età";
+            document.getElementsByClassName("text_error")[0].innerHTML = "Hai inserito un valore non valido per l'età. Ricarica la pagina con un click sul bottone qui sotto";
             check_age = 1;
         } if (isNaN(kilometers) || kilometers < 0 || (kilometers % 1 != 0)) {
-            document.getElementById("price").innerHTML = "Hai inserito un valore non valido per i chilometri";
+            document.getElementsByClassName("text_error")[0].innerHTML = "Hai inserito un valore non valido per i chilometri. Ricarica la pagina con un click sul bottone qui sotto";
             check_km = 1;
         } if (check_age + check_km === 2) {
-            document.getElementById("price").innerHTML = "Hai inserito un valore non valido per età e km";
+            document.getElementsByClassName("text_error")[0].innerHTML = "Hai inserito un valore non valido per ETA' e KM. Ricarica la pagina con un click sul bottone qui sotto";
         }
+        document.getElementsByClassName("btn_reload")[0].addEventListener("click", function () {
+            window.location.reload();
+        })
     }
-
 }, 200)
-
-// todo
-// 3. aggiungere le voci richiesta da daniele ed eventualmente ricontrollare i calcoli
-
-
-
-// 6. aggiungere le animazioni una per volta
-// 8. se resta tempo e voglia inserire l'ora esatta in tempo reale.
-// spare time
-// 9. provare la soluzione con while.
