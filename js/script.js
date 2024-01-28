@@ -24,7 +24,17 @@ setTimeout(function () {
         document.getElementById("km_run").innerHTML = `${kilometers} km`;
         document.getElementById("price").innerHTML = `${priceTicket.toFixed(2)} €`;
     } else {
-        document.getElementById("price").innerHTML = "Hai inserito dei valori non validi";
+        let check_age;
+        let check_km;
+        if (isNaN(age) || (age < 0 && age > 110) || (age % 1 != 0)) {
+            document.getElementById("price").innerHTML = "Hai inserito un valore non valido per l'età";
+            check_age = 1;
+        } if (isNaN(kilometers) || kilometers < 0 || (kilometers % 1 != 0)) {
+            document.getElementById("price").innerHTML = "Hai inserito un valore non valido per i chilometri";
+            check_km = 1;
+        } if (check_age + check_km === 2) {
+            document.getElementById("price").innerHTML = "Hai inserito un valore non valido per età e km";
+        }
     }
 
 }, 200)

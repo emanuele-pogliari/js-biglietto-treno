@@ -63,7 +63,7 @@ body {
     border-radius: 15px;
 
     margin: 100px auto;
-    color: blue;
+    color: rgb(0, 0, 255);
     padding: 20px 100px 70px;
     background-color: rgba(232, 216, 216, 0.15);
     backdrop-filter: blur(23px);
