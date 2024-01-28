@@ -12,6 +12,8 @@
     box-sizing: border-box;
 }
 
+/* reset rules and fonts */
+
 body {
     font-family: "London Tube", sans-serif;
     background-image: url("../img/tube.jpeg");
@@ -20,74 +22,174 @@ body {
     background-position-y: 23%;
 }
 
-.logo-container {
-    width: 300px;
-    height: 300px;
-    position: relative;
-    margin: 50px auto;
-}
 
-.circle {
-    width: 300px;
-    height: 300px;
-    color: white;
-    border-radius: 50%;
-    position: relative;
-    border: 50px solid red;
-    position: absolute;
-    box-shadow: 0px -25px 20px -20px rgba(0, 0, 0, 0.45), 25px 0 20px -20px rgba(0, 0, 0, 0.45), 0px 25px 20px -20px rgba(0, 0, 0, 0.45), -25px 0 20px -20px rgba(0, 0, 0, 0.45);
-    animation: flicker 1.5s infinite alternate;
-    color: #fff;
-}
-
-.inner-rectangle {
-    width: 360px;
-    height: 60px;
-    background-color: blue;
-    position: absolute;
-    border: 5px solid white;
-    top: 50%;
-    left: -80px;
-    transform: translateY(-50%);
-    z-index: 5;
-    text-align: center;
-    line-height: 50px;
-    font-size: 33px;
-    box-shadow: 0px -25px 20px -20px rgba(0, 0, 0, 0.45), 25px 0 20px -20px rgba(0, 0, 0, 0.45), 0px 25px 20px -20px rgba(0, 0, 0, 0.45), -25px 0 20px -20px rgba(0, 0, 0, 0.45);
-    animation: flicker 1.5s infinite alternate;
-    color: #fff;
-}
+/* CARD */
 
 .card {
-    width: 800px;
-    border-radius: 15px;
-
-    margin: 100px auto;
-    color: rgb(0, 0, 255);
     padding: 20px 100px 70px;
+    margin: 100px auto;
+
+    width: 800px;
+
+    color: rgb(0, 0, 255);
+    border-radius: 15px;
     background-color: rgba(232, 216, 216, 0.15);
     backdrop-filter: blur(23px);
     box-shadow: 0px -25px 20px -20px rgba(0, 0, 0, 0.45), 25px 0 20px -20px rgba(0, 0, 0, 0.45), 0px 25px 20px -20px rgba(0, 0, 0, 0.45), -25px 0 20px -20px rgba(0, 0, 0, 0.45);
 }
 
-.border-circle-outer {
-    border: 5px solid rgb(204, 200, 200);
-    border-radius: 50%;
+/* text and data fields */
+
+.text {
+    padding-left: 10px;
+
+    font-size: 20px;
+    line-height: 40px;
+}
+
+#km_run,
+#age_entered,
+#disc_applied,
+#price {
+    width: 100%;
+    height: 40px;
+
+    background-color: rgba(245, 245, 245, 0.6);
+    border-radius: 15px;
+    color: rgb(42, 38, 38);
+
+}
+
+/* end text and data fields */
+
+
+/* logo */
+
+.logo-container {
+    position: relative;
+
+    margin: 50px auto;
+
     width: 300px;
     height: 300px;
+}
+
+.circle {
+    position: relative;
+
+    width: 300px;
+    height: 300px;
+
+    color: white;
+    border-radius: 50%;
+    border: 50px solid red;
+    box-shadow: 0px -25px 20px -20px rgba(0, 0, 0, 0.45), 25px 0 20px -20px rgba(0, 0, 0, 0.45), 0px 25px 20px -20px rgba(0, 0, 0, 0.45), -25px 0 20px -20px rgba(0, 0, 0, 0.45);
+
+    animation: flicker 1.5s infinite alternate;
+}
+
+.inner-rectangle {
     position: absolute;
+
+    width: 360px;
+    height: 60px;
+
+    top: 50%;
+    left: -80px;
+
+    transform: translateY(-50%);
+    z-index: 5;
+
+    background-color: blue;
+    border: 5px solid white;
+    text-align: center;
+    line-height: 50px;
+    font-size: 33px;
+    box-shadow: 0px -25px 20px -20px rgba(0, 0, 0, 0.45), 25px 0 20px -20px rgba(0, 0, 0, 0.45), 0px 25px 20px -20px rgba(0, 0, 0, 0.45), -25px 0 20px -20px rgba(0, 0, 0, 0.45);
+
+    animation: flicker 1.5s infinite alternate;
+}
+
+
+.border-circle-outer {
+    position: absolute;
+
     top: 0;
-    z-index: 3
+
+    width: 300px;
+    height: 300px;
+
+    z-index: 3;
+
+    border: 5px solid rgb(204, 200, 200);
+    border-radius: 50%;
 }
 
 .border-circle-inner {
-    border: 5px solid rgb(204, 200, 200);
-    border-radius: 50%;
+    position: absolute;
+
+    top: 0;
+
     width: 200px;
     height: 200px;
-    position: absolute;
-    top: 0;
+
+    border: 5px solid rgb(204, 200, 200);
+    border-radius: 50%;
 }
+
+/* end logo */
+
+/* RELOAD BUTTON */
+
+
+.data {
+    display: none;
+}
+
+
+.data_error {
+    display: none;
+
+    text-align: center;
+}
+
+/* toggle class on javascript */
+.visible {
+    display: block;
+}
+
+.text_error {
+    padding: 40px 80px;
+
+    font-size: 20px;
+    color: red;
+}
+
+.btn_reload {
+    transform: scale(0.3);
+
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+}
+
+.btn_container {
+    margin: 0 auto;
+    max-height: 150px;
+}
+
+.invert_blue {
+    border-color: blue;
+    animation: none;
+}
+
+.invert_red {
+    background-color: red;
+    animation: none;
+}
+
+
+/* ANIMATION LOGO */
 
 @keyframes flicker {
 
@@ -145,75 +247,4 @@ body {
     80% {
         text-shadow: none;
     }
-}
-
-
-
-#price {
-    color: black;
-    z-index: 7;
-}
-
-
-#km_run,
-#age_entered,
-#disc_applied,
-#price {
-    width: 100%;
-    height: 40px;
-    background-color: rgba(245, 245, 245, 0.6);
-    border-radius: 15px;
-    color: rgb(42, 38, 38);
-
-}
-
-
-.text {
-    font-size: 20px;
-    padding-left: 10px;
-    line-height: 40px;
-}
-
-
-.data {
-    display: none;
-}
-
-
-.data_error {
-    display: none;
-    text-align: center;
-}
-
-.visible {
-    display: block;
-}
-
-.text_error {
-    font-size: 20px;
-    padding: 40px 80px;
-    color: red;
-}
-
-.btn_reload {
-    background-color: transparent;
-    transform: scale(0.3);
-    border: none;
-    cursor: pointer;
-}
-
-.btn_container {
-    margin: 0 auto;
-    max-height: 150px;
-
-}
-
-.invert_blue {
-    border-color: blue;
-    animation: none;
-}
-
-.invert_red {
-    background-color: red;
-    animation: none;
 }
