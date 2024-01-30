@@ -11,12 +11,11 @@
 </head>
 
 <body>
-    <div id="menu" class="container">
 
+    <div id="menu" class="container">
         <div class="row py-5 text-center">
             <div class="col text-capitalize py-5 fs-2 fw-bold">quale app vuoi usare?</div>
         </div>
-
         <div class="row text-center justify-content-between">
             <div id="uno" class="col-3 card p-4 rounded-5 shadow">
                 <img class="img-fluid" src="./img/temp.png" alt="">
@@ -28,18 +27,23 @@
                 <img class="img-fluid" src="./img/Morra.webp" alt="">
             </div>
         </div>
-
     </div>
 
     <div id="converter" class="container">
         <div class="row text-center mt-5">
             <div class="col-8 mx-auto ">
-                <div class="card rounded-4">
+                <div class="card rounded-4 p-2">
                     <h2>Convertitore Gradi Celsius in Farenheit</h2>
-                    <div>Unità inserita dall'utente</div>
-                    <div id="user-degrees"></div>
-                    <div>Unità convertita in gradi Farenheit</div>
-                    <div id="converted"></div>
+                    <div class="row justify-content-around py-5">
+                        <div id="" class="col-3 card p-4 rounded-5 shadow">
+                            <img class="img-fluid" src="./img/celsius.png" alt="">
+                            <div id="user-degrees"></div>
+                        </div>
+                        <div id="" class="col-3 card p-4 rounded-5 shadow">
+                            <img class="img-fluid" src="./img/farenheit.png" alt="">
+                            <div id="converted" class=""></div>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
@@ -75,14 +79,7 @@
                 </div>
             </div>
         </div>
-
     </div>
-
-
-
-
-
-
 
     <div class="col mt-5 text-center">
         <button id="btn_reload" class="btn btn-lg btn-primary mt-5">Reload Page</button>
