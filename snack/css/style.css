@@ -1,3 +1,14 @@
 .col-3 {
     cursor: pointer;
+    transition: transform 0.2s;
+}
+
+#average,
+#ro-sci-pa,
+#converter {
+    display: none;
+}
+
+.col-3:hover {
+    transform: translateY(-10px);
 }

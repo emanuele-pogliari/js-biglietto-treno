@@ -31,14 +31,52 @@
 
     </div>
 
-    <div class="container">
-        <div class="row text-center">
-            <div class="col">
-
+    <div id="converter" class="container">
+        <div class="row text-center mt-5">
+            <div class="col-8 mx-auto ">
+                <div class="card rounded-4">
+                    <h2>Convertitore Gradi Celsius in Farenheit</h2>
+                    <div>Unità inserita dall'utente</div>
+                    <div id="user-degrees"></div>
+                    <div>Unità convertita in gradi Farenheit</div>
+                    <div id="converted"></div>
+                </div>
             </div>
         </div>
     </div>
 
+    <div id="average" class="container">
+        <div class="row text-center">
+            <div class="col-8 mx-auto">
+                <div class="card rounded-4">
+                    <h2>Calcolo della media</h2>
+                    <div>Primo numero inserito</div>
+                    <div id="numero-1"></div>
+                    <div>Secondo numero inserito</div>
+                    <div id="numero-2"></div>
+                    <div>Terzo numero inserito</div>
+                    <div id="numero-3"></div>
+                    <div id="result-average"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="ro-sci-pa" class="container">
+        <div class="row text-center">
+            <div class="col-8 mx-auto ">
+                <div class="card rounded-4 ">
+                    <h2>Carta, forbice, sasso</h2>
+                    <div>Scelta dell'utente</div>
+                    <div id="user-choice"></div>
+                    <div>Scelta del computer</div>
+                    <div id="computer-choice"></div>
+                    <div id="result"></div>
+                </div>
+            </div>
+        </div>
+
+    </div>
 
 
 
@@ -49,12 +87,6 @@
     <div class="col mt-5 text-center">
         <button id="btn_reload" class="btn btn-lg btn-primary mt-5">Reload Page</button>
     </div>
-    <div id="result">
-    </div>
-
-
-
-
 
     <script src="script.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
