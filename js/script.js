@@ -31,7 +31,7 @@ setTimeout(function () {
         let check_age;
         let check_km;
         document.getElementsByClassName("data_error")[0].classList.toggle("visible");
-        if (isNaN(age) || (age < 0 && age > 110) || (age % 1 != 0)) {
+        if (isNaN(age) || (age < 0 || age > 110) || (age % 1 != 0)) {
             document.getElementsByClassName("text_error")[0].innerHTML = "Hai inserito un valore non valido per l'età. Ricarica la pagina con un click sul bottone qui sotto";
             check_age = 1;
         }
